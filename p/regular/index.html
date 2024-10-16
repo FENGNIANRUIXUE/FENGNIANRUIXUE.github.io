@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" ">
-<title>Test</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 一、正则表达式简介\n正则表达式（Regular Expression）是一种文本模式，包括普通字符（例如，a、b、1、2）和特殊字符（称为元字符）。正则表达式用于对字符串进行搜索、替换、匹配等操作。\n">
+<title>regular </title>
 
-<link rel='canonical' href='https://fengnianruixue.github.io/p/test/'>
+<link rel='canonical' href='https://fengnianruixue.github.io/p/regular/'>
 
-<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="Test">
-<meta property='og:description' content=" ">
-<meta property='og:url' content='https://fengnianruixue.github.io/p/test/'>
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="regular ">
+<meta property='og:description' content=" 一、正则表达式简介\n正则表达式（Regular Expression）是一种文本模式，包括普通字符（例如，a、b、1、2）和特殊字符（称为元字符）。正则表达式用于对字符串进行搜索、替换、匹配等操作。\n">
+<meta property='og:url' content='https://fengnianruixue.github.io/p/regular/'>
 <meta property='og:site_name' content='FRENG'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-10-15T21:18:38&#43;08:00'/><meta property='article:modified_time' content='2024-10-15T21:18:38&#43;08:00'/>
-<meta name="twitter:title" content="Test">
-<meta name="twitter:description" content=" ">
+<meta name="twitter:title" content="regular ">
+<meta name="twitter:description" content=" 一、正则表达式简介\n正则表达式（Regular Expression）是一种文本模式，包括普通字符（例如，a、b、1、2）和特殊字符（称为元字符）。正则表达式用于对字符串进行搜索、替换、匹配等操作。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -250,7 +250,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/test/">Test</a>
+            <a href="/p/regular/">regular </a>
         </h2>
     
         
@@ -287,7 +287,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 0 分钟
+                    阅读时长: 2 分钟
                 </time>
             </div>
         
@@ -303,7 +303,59 @@
     
     
     <h2 id="heading">
-</h2>
+</h2><p>一、正则表达式简介</p>
+<p>正则表达式（Regular Expression）是一种文本模式，包括普通字符（例如，a、b、1、2）和特殊字符（称为元字符）。正则表达式用于对字符串进行搜索、替换、匹配等操作。</p>
+<p>二、元字符及其用法</p>
+<ol>
+<li>字符匹配</li>
+</ol>
+<ul>
+<li><code>.</code>：匹配除换行符以外的任意字符。</li>
+<li><code>[abc]</code>：匹配方括号内的任意字符（a、b、c）。</li>
+<li><code>[^abc]</code>：匹配不在方括号内的任意字符。</li>
+<li><code>\d</code>：匹配任意数字，相当于[0-9]。</li>
+<li><code>\D</code>：匹配任意非数字字符，相当于[^0-9]。</li>
+<li><code>\w</code>：匹配字母、数字或下划线，相当于[a-zA-Z0-9_]。</li>
+<li><code>\W</code>：匹配非字母、数字或下划线，相当于[^a-zA-Z0-9_]。</li>
+<li><code>\s</code>：匹配任意空白字符（空格、制表符、换行符等）。</li>
+<li><code>\S</code>：匹配任意非空白字符。</li>
+</ul>
+<ol>
+<li>量词</li>
+</ol>
+<ul>
+<li><code>*</code>：匹配前面的子表达式零次或多次。</li>
+<li><code>+</code>：匹配前面的子表达式一次或多次。</li>
+<li><code>?</code>：匹配前面的子表达式零次或一次。</li>
+<li><code>{n}</code>：匹配前面的子表达式恰好n次。</li>
+<li><code>{n,}</code>：匹配前面的子表达式至少n次。</li>
+<li><code>{n,m}</code>：匹配前面的子表达式至少n次，但不超过m次。</li>
+</ul>
+<ol>
+<li>定位符</li>
+</ol>
+<ul>
+<li><code>^</code>：匹配输入字符串的开始位置。</li>
+<li><code>$</code>：匹配输入字符串的结束位置。</li>
+<li><code>\b</code>：匹配单词边界。</li>
+<li><code>\B</code>：匹配非单词边界。</li>
+</ul>
+<ol>
+<li>分组和引用</li>
+</ol>
+<ul>
+<li><code>(exp)</code>：匹配exp并捕获文本到自动命名的组里。</li>
+<li><code>(?:exp)</code>：匹配exp但不捕获匹配的文本。</li>
+<li><code>\n</code>：引用编号为n的捕获组匹配的文本。</li>
+</ul>
+<p>三、示例</p>
+<ol>
+<li>匹配手机号码：<code>\b1[3-9]\d{9}\b</code></li>
+<li>匹配邮箱地址：<code>\w+@\w+(\.\w+)+</code></li>
+<li>匹配身份证号码：<code>\d{17}[\dXx]|\d{15}</code></li>
+</ol>
+<p>正则表达式是一个非常强大的工具，掌握它可以帮助我们在处理文本数据时更加高效。希望这份笔记能对你有所帮助。</p>
+
 </section>
 
 

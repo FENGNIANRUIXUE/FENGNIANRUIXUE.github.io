@@ -8,13 +8,65 @@
         <language>zh-cn</language>
         <copyright>FRENG</copyright>
         <lastBuildDate>Tue, 15 Oct 2024 21:18:38 +0800</lastBuildDate><atom:link href="https://fengnianruixue.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Test</title>
-        <link>https://fengnianruixue.github.io/p/test/</link>
+        <title>regular </title>
+        <link>https://fengnianruixue.github.io/p/regular/</link>
         <pubDate>Tue, 15 Oct 2024 21:18:38 +0800</pubDate>
         
-        <guid>https://fengnianruixue.github.io/p/test/</guid>
+        <guid>https://fengnianruixue.github.io/p/regular/</guid>
         <description>&lt;h2 id=&#34;heading&#34;&gt;
-&lt;/h2&gt;</description>
+&lt;/h2&gt;&lt;p&gt;一、正则表达式简介&lt;/p&gt;
+&lt;p&gt;正则表达式（Regular Expression）是一种文本模式，包括普通字符（例如，a、b、1、2）和特殊字符（称为元字符）。正则表达式用于对字符串进行搜索、替换、匹配等操作。&lt;/p&gt;
+&lt;p&gt;二、元字符及其用法&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;字符匹配&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.&lt;/code&gt;：匹配除换行符以外的任意字符。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[abc]&lt;/code&gt;：匹配方括号内的任意字符（a、b、c）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[^abc]&lt;/code&gt;：匹配不在方括号内的任意字符。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\d&lt;/code&gt;：匹配任意数字，相当于[0-9]。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\D&lt;/code&gt;：匹配任意非数字字符，相当于[^0-9]。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\w&lt;/code&gt;：匹配字母、数字或下划线，相当于[a-zA-Z0-9_]。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\W&lt;/code&gt;：匹配非字母、数字或下划线，相当于[^a-zA-Z0-9_]。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\s&lt;/code&gt;：匹配任意空白字符（空格、制表符、换行符等）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\S&lt;/code&gt;：匹配任意非空白字符。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;量词&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt;：匹配前面的子表达式零次或多次。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;+&lt;/code&gt;：匹配前面的子表达式一次或多次。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;?&lt;/code&gt;：匹配前面的子表达式零次或一次。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{n}&lt;/code&gt;：匹配前面的子表达式恰好n次。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{n,}&lt;/code&gt;：匹配前面的子表达式至少n次。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{n,m}&lt;/code&gt;：匹配前面的子表达式至少n次，但不超过m次。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;定位符&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;^&lt;/code&gt;：匹配输入字符串的开始位置。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;$&lt;/code&gt;：匹配输入字符串的结束位置。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\b&lt;/code&gt;：匹配单词边界。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\B&lt;/code&gt;：匹配非单词边界。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;分组和引用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;(exp)&lt;/code&gt;：匹配exp并捕获文本到自动命名的组里。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(?:exp)&lt;/code&gt;：匹配exp但不捕获匹配的文本。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\n&lt;/code&gt;：引用编号为n的捕获组匹配的文本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;三、示例&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;匹配手机号码：&lt;code&gt;\b1[3-9]\d{9}\b&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;匹配邮箱地址：&lt;code&gt;\w+@\w+(\.\w+)+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;匹配身份证号码：&lt;code&gt;\d{17}[\dXx]|\d{15}&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;正则表达式是一个非常强大的工具，掌握它可以帮助我们在处理文本数据时更加高效。希望这份笔记能对你有所帮助。&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>Chinese Test</title>
@@ -148,18 +200,18 @@
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;Name&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;Age&lt;/th&gt;
+          &lt;th&gt;Name&lt;/th&gt;
+          &lt;th&gt;Age&lt;/th&gt;
       &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Bob&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;27&lt;/td&gt;
+          &lt;td&gt;Bob&lt;/td&gt;
+          &lt;td&gt;27&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Alice&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;23&lt;/td&gt;
+          &lt;td&gt;Alice&lt;/td&gt;
+          &lt;td&gt;23&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -167,38 +219,38 @@
 &lt;/h4&gt;&lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;Italics&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;Bold&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;Code&lt;/th&gt;
+          &lt;th&gt;Italics&lt;/th&gt;
+          &lt;th&gt;Bold&lt;/th&gt;
+          &lt;th&gt;Code&lt;/th&gt;
       &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;em&gt;italics&lt;/em&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;bold&lt;/strong&gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;code&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;em&gt;italics&lt;/em&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;bold&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;code&lt;/code&gt;&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;A&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;B&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;C&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;D&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;E&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;F&lt;/th&gt;
+          &lt;th&gt;A&lt;/th&gt;
+          &lt;th&gt;B&lt;/th&gt;
+          &lt;th&gt;C&lt;/th&gt;
+          &lt;th&gt;D&lt;/th&gt;
+          &lt;th&gt;E&lt;/th&gt;
+          &lt;th&gt;F&lt;/th&gt;
       &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Phasellus ultricies, sapien non euismod aliquam, dui ligula tincidunt odio, at accumsan nulla sapien eget ex.&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Proin eleifend dictum ipsum, non euismod ipsum pulvinar et. Vivamus sollicitudin, quam in pulvinar aliquam, metus elit pretium purus&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Proin sit amet velit nec enim imperdiet vehicula.&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Ut bibendum vestibulum quam, eu egestas turpis gravida nec&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;Sed scelerisque nec turpis vel viverra. Vivamus vitae pretium sapien&lt;/td&gt;
+          &lt;td&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/td&gt;
+          &lt;td&gt;Phasellus ultricies, sapien non euismod aliquam, dui ligula tincidunt odio, at accumsan nulla sapien eget ex.&lt;/td&gt;
+          &lt;td&gt;Proin eleifend dictum ipsum, non euismod ipsum pulvinar et. Vivamus sollicitudin, quam in pulvinar aliquam, metus elit pretium purus&lt;/td&gt;
+          &lt;td&gt;Proin sit amet velit nec enim imperdiet vehicula.&lt;/td&gt;
+          &lt;td&gt;Ut bibendum vestibulum quam, eu egestas turpis gravida nec&lt;/td&gt;
+          &lt;td&gt;Sed scelerisque nec turpis vel viverra. Vivamus vitae pretium sapien&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
